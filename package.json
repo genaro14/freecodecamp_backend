@@ -2,7 +2,7 @@
 	"name": "fcc-learn-npm-package-json",
 	"author": "Garufa",
 	"description": "This is FCC repo for Garufa in IT10s cloud",
-	"keywords": ["Code","Bootcamp","JS", "Backend"],
+	"keywords": ["Code","Bootcamp","JS", "Backend","freecodecamp"],
 	"dependencies": {
 		"express": "^4.14.0"
 	},
