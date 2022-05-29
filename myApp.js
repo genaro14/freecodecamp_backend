@@ -5,19 +5,21 @@ const indexPath = __dirname + '/views/index.html';
 const publicPath = __dirname + '/public';
 
 
-console.log("Hello World");
-app.use("/public", express.static(publicPath));
-
+app.use(function(req, res, next) {
+    const response = req.method + ' ' + req.path + ' - ' + req.ip
+    console.log(response);
+    next();
+});
 app.get('/', function (req, res) {
     res.sendFile(indexPath)
 });
+app.use("/public", express.static(publicPath));
 
-console.log(process.env.MESSAGE_STYLE);
 app.get('/json', function (req, res) {
     let response = {};
     const lowercase = { "message": "Hello json" };
     const uppercase = { "message": "HELLO JSON" };
-    if (process.env.MESSAGE_STYLE == 'uppercase') response = uppercase
+    if (process.env.MESSAGE_STYLE === "uppercase") response = uppercase
     else response = lowercase;
     res.json(response)
 });
