@@ -1,5 +1,6 @@
 {
 	"name": "fcc-learn-npm-package-json",
+	"author": "Garufa <genaropennone@gmail.com> (https://github.com/genaro14)",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
@@ -10,6 +11,5 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/genaro14/freecodecamp_backend"
-	},
-	"author": "Garufa <genaropennone@gmail.com> (https://github.com/genaro14)"
+	}
 }
