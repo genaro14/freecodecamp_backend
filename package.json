@@ -4,10 +4,10 @@
 	"description": "This is FCC repo for Garufa in IT10s cloud",
 	"keywords": ["Code","Bootcamp","JS", "Backend","freecodecamp"],
 	"license": "MIT",
-	"version": "2.10.2",
+	"version": "0.0.7",
 	"dependencies": {
 		"express": "^4.14.0",
-		"moment": "2.14.0"
+		"moment": "2.10.2"
 	},
 	"main": "server.js",
 	"scripts": {
