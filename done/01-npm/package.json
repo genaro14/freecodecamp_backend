@@ -1,0 +1,19 @@
+{
+	"name": "fcc-learn-npm-package-json",
+	"author": "Garufa",
+	"description": "This is FCC repo for Garufa in IT10s cloud",
+	"keywords": ["Code","Bootcamp","JS", "Backend","freecodecamp"],
+	"license": "MIT",
+	"version": "0.0.7",
+	"dependencies": {
+		"express": "^4.14.0"
+	},
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://idontknow/todo.git"
+	}
+}
