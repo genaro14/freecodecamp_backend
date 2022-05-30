@@ -36,5 +36,10 @@ app.get('/now', handler,(req, res) => {
 app.get('/:word/echo', (req, res) => {
         res.send({ 'echo': req.params.word })
 });
+app.get('/name', (req, res,next) => {
+    const response = { name: req.query.first + ' ' + req.query.last } 
+    res.send(response);
+    // next();
+});
 
 module.exports = app;
