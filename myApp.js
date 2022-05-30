@@ -1,6 +1,8 @@
 let express = require('express');
 let app = express();
 require('dotenv').config()
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: false}));
 const indexPath = __dirname + '/views/index.html';
 const publicPath = __dirname + '/public';
 
@@ -41,5 +43,6 @@ app.get('/name', (req, res,next) => {
     res.send(response);
     // next();
 });
+
 
 module.exports = app;
