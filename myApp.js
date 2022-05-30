@@ -44,6 +44,11 @@ app.get('/name', (req, res,next) => {
     res.send(response);
     // next();
 });
+app.post('/name', (req, res,next) => {
+    const response = { name: req.query.first + ' ' + req.query.last } 
+    res.send(response);
+    // next();
+});
 
 
 module.exports = app;
