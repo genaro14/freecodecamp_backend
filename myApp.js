@@ -4,15 +4,17 @@ require('dotenv').config()
 const indexPath = __dirname + '/views/index.html';
 const publicPath = __dirname + '/public';
 
-
 app.use(function(req, res, next) {
     const response = req.method + ' ' + req.path + ' - ' + req.ip
     console.log(response);
     next();
 });
+
 app.get('/', function (req, res) {
     res.sendFile(indexPath)
 });
+
+
 app.use("/public", express.static(publicPath));
 
 app.get('/json', function (req, res) {
@@ -31,41 +33,8 @@ const handler = (req, res, next) => {
 app.get('/now', handler,(req, res) => {
     res.send({time: req.time })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.get('/:word/echo', (req, res) => {
+        res.send({ 'echo': req.params.word })
+});
 
 module.exports = app;
