@@ -45,7 +45,7 @@ app.get('/name', (req, res,next) => {
      next();
 });
 app.post('/name', (req, res,next) => {
-    const response = { name: req.query.first + ' ' + req.query.last } 
+    const response = { name: req.body.first + ' ' + req.body.last } 
     res.send(response);
     next();
 });
