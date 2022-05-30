@@ -42,12 +42,12 @@ app.get('/:word/echo', (req, res) => {
 app.get('/name', (req, res,next) => {
     const response = { name: req.query.first + ' ' + req.query.last } 
     res.send(response);
-    // next();
+     next();
 });
 app.post('/name', (req, res,next) => {
     const response = { name: req.query.first + ' ' + req.query.last } 
     res.send(response);
-    // next();
+    next();
 });
 
 
