@@ -5,12 +5,9 @@ const personSchema = require('./src/models/personSchema');
 //DB Connection
 mongoose.connect(db, { useNewUrlParser: true})
 .catch(error => handleError(error));
+const Person = mongoose.model("Person", personSchema);
 
-let Person = new personSchema({
-  name: 'John',
-  age: 36,
-  favoriteFoods: ['hamburguer','pizza']
-});
+
 console.log('Person:', Person);
 
 const createAndSavePerson = (done) => {
