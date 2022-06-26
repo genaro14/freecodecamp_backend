@@ -6,7 +6,7 @@ const personSchema = require('./src/models/personSchema');
 mongoose.connect(db, { useNewUrlParser: true})
 .catch(error => handleError(error));
 
-const person = new personSchema({
+const Person = new personSchema({
   name: 'John',
   age: 36,
   favoriteFoods: ['hamburguer','pizza']
