@@ -12,8 +12,6 @@ const personSchema = new Schema({
   age: Number,
   favoriteFoods: [String]
 });
-
-let Person = new personSchema();
 console.log('Person:', Person);
 
 const createAndSavePerson = (done) => {
