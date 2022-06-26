@@ -1,17 +1,20 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 const db = process.env.MONGO_URI
-const personSchema = require('./src/models/personSchema');
 //DB Connection
 mongoose.connect(db, { useNewUrlParser: true})
 .catch(error => handleError(error));
 
+const personSchema = new Schema({
+  name: { type: String, required: true },
+  age: Number,
+  favoriteFoods: [String]
+});
+
+let Person = new personSchema();
+console.log('Person:', Person);
 
 const createAndSavePerson = (done) => {
-  let Person = new personSchema();
-  console.log('Person:', Person);
-  if (error) return done(error);
-  exports.Person = Person;
   done(null /*, data*/);
 };
 
