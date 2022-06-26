@@ -18,7 +18,7 @@ const router = express.Router();
 
 const enableCORS = function (req, res, next) {
   if (!process.env.DISABLE_XORIGIN) {
-    const allowedOrigins = ["https://www.freecodecamp.org"];
+    const allowedOrigins = ["*"];
     const origin = req.headers.origin;
     if (!process.env.XORIGIN_RESTRICT || allowedOrigins.indexOf(origin) > -1) {
       console.log(req.method);
@@ -138,6 +138,7 @@ router.post("/create-many-people", function (req, res, next) {
 
 const findByName = require("./myApp.js").findPeopleByName;
 router.post("/find-all-by-name", function (req, res, next) {
+  console.log(req.body);
   let t = setTimeout(() => {
     next({ message: "timeout" });
   }, TIMEOUT);
@@ -162,6 +163,7 @@ router.post("/find-all-by-name", function (req, res, next) {
 
 const findByFood = require("./myApp.js").findOneByFood;
 router.post("/find-one-by-food", function (req, res, next) {
+  console.log(req.body);
   let t = setTimeout(() => {
     next({ message: "timeout" });
   }, TIMEOUT);
@@ -187,6 +189,7 @@ router.post("/find-one-by-food", function (req, res, next) {
 
 const findById = require("./myApp.js").findPersonById;
 router.get("/find-by-id", function (req, res, next) {
+  console.log(req.body);
   let t = setTimeout(() => {
     next({ message: "timeout" });
   }, TIMEOUT);
@@ -212,6 +215,7 @@ router.get("/find-by-id", function (req, res, next) {
 
 const findEdit = require("./myApp.js").findEditThenSave;
 router.post("/find-edit-save", function (req, res, next) {
+  console.log(req.body);
   let t = setTimeout(() => {
     next({ message: "timeout" });
   }, TIMEOUT);
@@ -232,6 +236,7 @@ router.post("/find-edit-save", function (req, res, next) {
         }
         res.json(data);
         p.remove();
+        console.log("Success");
       });
     } catch (e) {
       console.log(e);
@@ -366,6 +371,7 @@ router.post("/remove-many-people", function (req, res, next) {
 
 const chain = require("./myApp.js").queryChain;
 router.post("/query-tools", function (req, res, next) {
+  console.log(req.body);
   let t = setTimeout(() => {
     next({ message: "timeout" });
   }, TIMEOUT);

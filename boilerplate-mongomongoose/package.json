@@ -12,7 +12,6 @@
         "express": "^4.12.4",
         "mongodb": "~3.6.0",
         "mongoose": "~5.4.0"
-
     },
     "repository": {
         "type": "git",
@@ -23,5 +22,10 @@
         "mongoose",
         "express"
     ],
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "http-debug": "^0.1.2",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.18"
+    }
 }
