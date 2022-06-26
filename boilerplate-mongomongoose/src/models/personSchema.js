@@ -9,4 +9,4 @@ let personSchema = new mongoose.Schema({
   favoriteFoods : [String],
 });
 
-module.exports = mongoose.model('Persom', personSchema)
+module.exports = mongoose.model('Person', personSchema)
