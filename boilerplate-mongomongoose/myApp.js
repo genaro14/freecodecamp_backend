@@ -11,6 +11,7 @@ const createAndSavePerson = (done) => {
   let Person = new personSchema();
   console.log('Person:', Person);
   if (error) return done(error);
+  exports.Person = Person;
   done(null /*, data*/);
 };
 
