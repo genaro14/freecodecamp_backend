@@ -2,8 +2,10 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const db = process.env.MONGO_URI
 const personSchema = require('./personSchema');
+//DB Connection
 mongoose.connect(db, { useNewUrlParser: true})
 .catch(error => handleError(error));
+
 const person = mongoose.model('Person', personSchema);;
 
 let Person;
